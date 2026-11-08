@@ -1,0 +1,1709 @@
+/* Lucky Block Titans 3D — Bright Toy-Storybook 5-Viewport Responsive Stylesheet (owner: lucky-ui)
+   Viewports gated: 1280x800, 1024x768, 768x1024 (iPad portrait), 844x390, 390x844.
+   Strict invariants: 0 scrollbars, 0 clipped text, <= 5 active controls, >= 72x72 px targets, >= 34px icons. */
+
+:root {
+  --font-kid: 'Fredoka', 'Nunito', 'Arial Rounded MT Bold', 'Trebuchet MS', system-ui, -apple-system, sans-serif;
+  --gold-top: #ffe875;
+  --gold-bot: #fab005;
+  --gold-lip: #b87100;
+  --emerald-top: #74e386;
+  --emerald-bot: #2fb344;
+  --emerald-lip: #1d752b;
+  --sky-top: #66c7ff;
+  --sky-bot: #1c7ed6;
+  --sky-lip: #11518c;
+  --purple-top: #da77f2;
+  --purple-bot: #9c36b5;
+  --purple-lip: #671e7a;
+  --outline-dark: #4a2d06;
+  --cream-top: #fffef5;
+  --cream-bot: #fff3bf;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+[hidden],
+.is-hidden {
+  display: none !important;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden !important;
+  position: fixed;
+  inset: 0;
+  overscroll-behavior: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  touch-action: none;
+  background: #74c8ff;
+  font-family: var(--font-kid);
+  color: #362004;
+  -webkit-font-smoothing: antialiased;
+}
+
+#game-canvas,
+canvas {
+  display: block;
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  touch-action: none;
+  outline: none;
+  z-index: 1;
+}
+
+#ui-layer {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 40;
+}
+
+/* ============================================================================
+   Chunky 3D Tactile Kid Buttons (>= 76x76 px, >= 34px icons first, label second)
+   ============================================================================ */
+
+.kid-btn {
+  appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  min-width: 80px;
+  min-height: 78px;
+  padding: 6px 10px 10px;
+  border-radius: 20px;
+  border: 3px solid var(--outline-dark);
+  background: linear-gradient(180deg, var(--gold-top) 0%, var(--gold-bot) 100%);
+  box-shadow: 0 6px 0 var(--gold-lip), inset 0 3px 0 rgba(255, 255, 255, 0.72), 0 8px 16px rgba(0, 0, 0, 0.2);
+  color: #362004;
+  font-family: var(--font-kid);
+  font-weight: 900;
+  cursor: pointer;
+  pointer-events: auto;
+  touch-action: manipulation;
+  text-align: center;
+  transition: transform 0.08s ease, filter 0.12s ease;
+}
+
+.kid-btn:focus-visible {
+  outline: 4px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.kid-btn .btn-icon {
+  display: block;
+  font-size: 35px;
+  line-height: 1;
+  flex-shrink: 0;
+  pointer-events: none;
+  filter: drop-shadow(0 2px 0 rgba(0, 0, 0, 0.16));
+}
+
+.kid-btn .btn-label {
+  display: block;
+  font-size: 13px;
+  line-height: 1.05;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  pointer-events: none;
+  max-width: 100%;
+}
+
+.kid-btn .btn-badge {
+  position: absolute;
+  top: 2px;
+  right: 3px;
+  z-index: 3;
+  padding: 1px 5px;
+  border-radius: 999px;
+  background: #fffdf2;
+  color: #4a2d06;
+  border: 2px solid #4a2d06;
+  font-size: 10px;
+  line-height: 1.15;
+  font-weight: 900;
+  pointer-events: none;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.15);
+}
+
+.kid-btn.is-pressed,
+.kid-btn:active:not(.is-disabled) {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 var(--gold-lip), inset 0 2px 0 rgba(255, 255, 255, 0.6);
+}
+
+.kid-btn-emerald,
+.kid-btn-play {
+  background: linear-gradient(180deg, var(--emerald-top) 0%, var(--emerald-bot) 100%);
+  border-color: #14491e;
+  box-shadow: 0 6px 0 var(--emerald-lip), inset 0 3px 0 rgba(255, 255, 255, 0.68), 0 8px 18px rgba(0, 0, 0, 0.22);
+  color: #ffffff;
+  text-shadow: 0 2px 0 #14491e;
+}
+
+.kid-btn-emerald.is-pressed,
+.kid-btn-emerald:active:not(.is-disabled),
+.kid-btn-play.is-pressed,
+.kid-btn-play:active:not(.is-disabled) {
+  box-shadow: 0 2px 0 var(--emerald-lip), inset 0 2px 0 rgba(255, 255, 255, 0.5);
+}
+
+.kid-btn-gold {
+  background: linear-gradient(180deg, var(--gold-top) 0%, var(--gold-bot) 100%);
+  border-color: var(--outline-dark);
+  box-shadow: 0 6px 0 var(--gold-lip), inset 0 3px 0 rgba(255, 255, 255, 0.75), 0 8px 16px rgba(0, 0, 0, 0.2);
+  color: #3b2204;
+}
+
+.kid-btn-sky {
+  background: linear-gradient(180deg, var(--sky-top) 0%, var(--sky-bot) 100%);
+  border-color: #0b3966;
+  box-shadow: 0 6px 0 var(--sky-lip), inset 0 3px 0 rgba(255, 255, 255, 0.65), 0 8px 16px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  text-shadow: 0 2px 0 #0b3966;
+}
+
+.kid-btn-sky.is-pressed,
+.kid-btn-sky:active:not(.is-disabled) {
+  box-shadow: 0 2px 0 var(--sky-lip), inset 0 2px 0 rgba(255, 255, 255, 0.5);
+}
+
+.kid-btn-purple {
+  background: linear-gradient(180deg, var(--purple-top) 0%, var(--purple-bot) 100%);
+  border-color: #491257;
+  box-shadow: 0 6px 0 var(--purple-lip), inset 0 3px 0 rgba(255, 255, 255, 0.65), 0 8px 16px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  text-shadow: 0 2px 0 #491257;
+}
+
+.kid-btn-purple.is-pressed,
+.kid-btn-purple:active:not(.is-disabled) {
+  box-shadow: 0 2px 0 var(--purple-lip), inset 0 2px 0 rgba(255, 255, 255, 0.5);
+}
+
+.kid-btn.is-disabled {
+  opacity: 0.58;
+  cursor: default;
+  filter: grayscale(0.25);
+}
+
+.kid-btn.is-dimmed {
+  filter: saturate(0.75) brightness(0.96);
+}
+
+@keyframes kidPulseRing {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.035);
+  }
+}
+
+.kid-btn.is-pulsing:not(.is-pressed):not(.is-disabled) {
+  animation: kidPulseRing 1.15s ease-in-out infinite;
+}
+
+.hud-btn-spin.is-pulsing {
+  outline: 4px solid rgba(255, 224, 102, 0.92);
+  outline-offset: 1px;
+}
+
+.hud-btn-pot.is-pulsing {
+  outline: 4px solid rgba(116, 227, 134, 0.95);
+  outline-offset: 1px;
+}
+
+.kid-btn.is-speaking {
+  outline: 4px solid #ffd43b;
+  outline-offset: 1px;
+}
+
+@keyframes kidWiggle {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+.is-shake {
+  animation: kidWiggle 0.26s ease-in-out 1;
+}
+
+/* ============================================================================
+   Title Screen Overlay (Live 3D Island Sparkles Behind!)
+   ============================================================================ */
+
+.title-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 14px 116px;
+  pointer-events: auto;
+  background: radial-gradient(circle at 50% 45%, rgba(255, 252, 232, 0.08) 0%, rgba(16, 52, 92, 0.24) 100%);
+}
+
+.title-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: min(620px, 94vw);
+  padding: 14px 22px 16px;
+  border-radius: 28px;
+  background: linear-gradient(180deg, rgba(255, 253, 240, 0.94) 0%, rgba(255, 241, 184, 0.94) 100%);
+  border: 4px solid #f08c00;
+  box-shadow: 0 7px 0 #b86200, 0 14px 28px rgba(0, 0, 0, 0.22);
+  pointer-events: none;
+}
+
+.title-kicker {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 999px;
+  background: #ffe066;
+  border: 2px solid #b86200;
+  color: #5c3400;
+  font-size: clamp(12px, 1.8vw, 15px);
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+}
+
+.title-heading {
+  margin: 0;
+  font-size: clamp(28px, 5.2vw, 52px);
+  line-height: 1.04;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  color: #ff922b;
+  text-shadow: 0 3px 0 #5c2b00, 0 5px 10px rgba(0, 0, 0, 0.16);
+}
+
+.title-sub {
+  margin-top: 6px;
+  font-size: clamp(13px, 2.2vw, 18px);
+  font-weight: 900;
+  color: #1971c2;
+  letter-spacing: 0.03em;
+}
+
+.title-story-icons {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.story-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: #ffffff;
+  border: 2px solid #f59f00;
+  box-shadow: 0 3px 0 #e67700;
+}
+
+.story-emoji {
+  font-size: 26px;
+  line-height: 1;
+}
+
+.story-arrow {
+  font-size: 16px;
+  opacity: 0.85;
+}
+
+.title-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+#btn-title-continue {
+  min-width: 196px;
+  min-height: 122px;
+  flex-direction: row;
+  gap: 10px;
+  padding: 12px 22px 16px;
+  border-radius: 30px;
+}
+
+#btn-title-continue .btn-icon {
+  font-size: 40px;
+}
+
+#btn-title-continue .btn-label {
+  font-size: 22px;
+}
+
+#btn-title-play {
+  min-width: 204px;
+  min-height: 122px;
+  flex-direction: row;
+  gap: 12px;
+  padding: 12px 26px 16px;
+  border-radius: 30px;
+}
+
+#btn-title-play .btn-icon {
+  font-size: 44px;
+}
+
+#btn-title-play .btn-label {
+  font-size: 28px;
+}
+
+#btn-title-voice {
+  min-width: 106px;
+  min-height: 122px;
+  padding: 10px 14px 14px;
+  border-radius: 26px;
+}
+
+#btn-title-voice .btn-icon {
+  font-size: 40px;
+}
+
+#btn-title-voice .btn-label {
+  font-size: 16px;
+}
+
+/* ============================================================================
+   Active Play HUD (<= 4 buttons at bottom; status badges strictly pointer-events: none)
+   ============================================================================ */
+
+.hud-root {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  pointer-events: none !important;
+}
+
+.hud-status,
+.hud-status * {
+  pointer-events: none !important;
+}
+
+.hud-status {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.hud-top-left {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  max-width: 68vw;
+}
+
+.hud-top-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+.hud-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 40px;
+  padding: 4px 11px;
+  border-radius: 999px;
+  background: rgba(255, 253, 240, 0.94);
+  border: 3px solid #5c3b09;
+  box-shadow: 0 4px 0 rgba(92, 59, 9, 0.85), 0 6px 12px rgba(0, 0, 0, 0.16);
+  font-weight: 900;
+  color: #362004;
+}
+
+.hud-gems-pill {
+  background: linear-gradient(180deg, #fff9db 0%, #ffe066 100%);
+  transition: box-shadow 0.14s ease, border-color 0.14s ease;
+}
+
+.hud-gems-pill.is-pop {
+  border-color: #d97706;
+  box-shadow: 0 4px 0 rgba(92, 59, 9, 0.85), 0 0 0 3px rgba(255, 212, 59, 0.65);
+}
+
+.hud-gems-pill .hud-pill-emoji,
+.hud-gems-pill .hud-pill-val {
+  display: inline-block;
+  transition: transform 0.14s ease;
+}
+
+.hud-gems-pill.is-pop .hud-pill-emoji,
+.hud-gems-pill.is-pop .hud-pill-val {
+  transform: scale(1.16);
+}
+
+.hud-pill-emoji {
+  font-size: 21px;
+  line-height: 1;
+}
+
+.hud-pill-val {
+  font-size: 19px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.hud-power-pill {
+  background: linear-gradient(180deg, #e7f5ff 0%, #a5d8ff 100%);
+  border-color: #1864ab;
+  box-shadow: 0 4px 0 #1864ab;
+  color: #0b3c6e;
+}
+
+.hud-weapon-img {
+  width: 26px;
+  height: 26px;
+  image-rendering: pixelated;
+  flex-shrink: 0;
+}
+
+.hud-power-val {
+  font-size: 17px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.hud-gear-icons {
+  font-size: 15px;
+  line-height: 1;
+}
+
+.hud-shields-pill {
+  background: linear-gradient(180deg, #fff0f6 0%, #fcc2d7 100%);
+  border-color: #a61e4d;
+  box-shadow: 0 4px 0 #a61e4d;
+  padding: 4px 9px;
+}
+
+.hud-shields-pill.is-rainbow {
+  background: linear-gradient(90deg, #ffd8a8 0%, #ffe066 35%, #b2f2bb 70%, #d0bfff 100%);
+  border-color: #5f3dc4;
+  box-shadow: 0 4px 0 #5f3dc4;
+}
+
+.hud-shields-row {
+  font-size: 15px;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.hud-trophies-pill {
+  background: linear-gradient(180deg, #fff9db 0%, #ffec99 100%);
+  padding: 4px 10px;
+}
+
+.hud-trophy-pips {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.trophy-pip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  font-size: 13px;
+  background: rgba(0, 0, 0, 0.1);
+  opacity: 0.35;
+  filter: grayscale(1);
+  transition: transform 0.2s ease, opacity 0.2s ease, filter 0.2s ease;
+}
+
+.trophy-pip.is-unlocked {
+  opacity: 1;
+  filter: none;
+  background: #ffd43b;
+  box-shadow: 0 0 0 2px #d97706;
+  transform: scale(1.08);
+}
+
+.hud-trophies-val {
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 900;
+  margin-left: 3px;
+}
+
+.hud-actions {
+  position: absolute;
+  bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.hud-action-btn {
+  width: 92px;
+  height: 84px;
+  min-width: 88px;
+  min-height: 82px;
+  padding: 11px 6px 6px;
+  gap: 2px;
+}
+
+.hud-btn-spin {
+  background: linear-gradient(180deg, var(--gold-top) 0%, var(--gold-bot) 100%);
+}
+
+.hud-btn-pot {
+  background: linear-gradient(180deg, var(--emerald-top) 0%, var(--emerald-bot) 100%);
+  border-color: #14491e;
+  box-shadow: 0 6px 0 var(--emerald-lip), inset 0 3px 0 rgba(255, 255, 255, 0.68), 0 8px 16px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  text-shadow: 0 2px 0 #14491e;
+}
+
+.hud-btn-pot.is-pressed,
+.hud-btn-pot:active {
+  box-shadow: 0 2px 0 var(--emerald-lip);
+}
+
+.hud-btn-voice {
+  background: linear-gradient(180deg, var(--sky-top) 0%, var(--sky-bot) 100%);
+  border-color: #0b3966;
+  box-shadow: 0 6px 0 var(--sky-lip), inset 0 3px 0 rgba(255, 255, 255, 0.65), 0 8px 16px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  text-shadow: 0 2px 0 #0b3966;
+}
+
+.hud-btn-voice.is-pressed,
+.hud-btn-voice:active {
+  box-shadow: 0 2px 0 var(--sky-lip);
+}
+
+.hud-btn-menu {
+  background: linear-gradient(180deg, #f3d9fa 0%, #be4bdb 100%);
+  border-color: #491257;
+  box-shadow: 0 6px 0 var(--purple-lip), inset 0 3px 0 rgba(255, 255, 255, 0.65), 0 8px 16px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  text-shadow: 0 2px 0 #491257;
+}
+
+.hud-btn-menu.is-pressed,
+.hud-btn-menu:active {
+  box-shadow: 0 2px 0 var(--purple-lip);
+}
+
+.hud-btn-jump {
+  background: linear-gradient(180deg, #66d9e8 0%, #1098ad 100%);
+  border-color: #0b4f5c;
+  box-shadow: 0 6px 0 #0b4f5c, inset 0 3px 0 rgba(255, 255, 255, 0.72), 0 8px 16px rgba(0, 0, 0, 0.22);
+  color: #ffffff;
+  text-shadow: 0 2px 0 #0b4f5c;
+}
+
+.hud-btn-jump.is-pressed,
+.hud-btn-jump:active {
+  box-shadow: 0 2px 0 #0b4f5c;
+}
+
+.hud-btn-drum {
+  width: 98px;
+  min-width: 94px;
+  background: linear-gradient(180deg, #ff922b 0%, #e8590c 100%);
+  border-color: #7f2704;
+  box-shadow: 0 6px 0 #7f2704, inset 0 3px 0 rgba(255, 255, 255, 0.72), 0 8px 16px rgba(0, 0, 0, 0.22);
+  color: #ffffff;
+  text-shadow: 0 2px 0 #7f2704;
+}
+
+.hud-btn-drum.is-pressed,
+.hud-btn-drum:active {
+  box-shadow: 0 2px 0 #7f2704;
+}
+
+/* ============================================================================
+   Boss HP Banner & Comic POW!/BONK!/BOING! Popups (Strictly Non-Interactive)
+   ============================================================================ */
+
+.boss-banner,
+.boss-banner *,
+.comic-burst-layer,
+.comic-burst-layer * {
+  pointer-events: none !important;
+}
+
+.boss-banner {
+  position: fixed;
+  top: 56px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(364px, calc(100vw - 20px));
+  padding: 7px 12px 9px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #fffdf2 0%, #ffe8a1 100%);
+  border: 3px solid #5c3b09;
+  box-shadow: 0 5px 0 #5c3b09, 0 10px 20px rgba(0, 0, 0, 0.22);
+  z-index: 32;
+}
+
+.boss-banner.is-hit {
+  transform: translateX(-50%) scale(1.04);
+}
+
+.boss-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  margin-bottom: 5px;
+}
+
+.boss-icon {
+  font-size: 20px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.boss-name {
+  font-size: 14px;
+  font-weight: 900;
+  color: #3b2204;
+  flex: 1;
+  text-align: left;
+}
+
+.boss-gate-pill {
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+
+.boss-gate-pill.is-ready {
+  background: #51cf66;
+  color: #0b3d16;
+  border: 2px solid #1b5e28;
+}
+
+.boss-gate-pill.is-need {
+  background: #74c0fc;
+  color: #0b3966;
+  border: 2px solid #1864ab;
+}
+
+.boss-hp-track {
+  position: relative;
+  width: 100%;
+  height: 18px;
+  border-radius: 999px;
+  background: #493218;
+  border: 2px solid #362004;
+  overflow: hidden;
+}
+
+.boss-hp-trail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #ffffff;
+  opacity: 0.8;
+}
+
+.boss-hp-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #ff922b 0%, #ffd43b 60%, #51cf66 100%);
+  transition: width 0.09s ease-out;
+}
+
+.boss-hp-text {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 11px;
+  line-height: 14px;
+  font-weight: 900;
+  color: #ffffff;
+  text-shadow: 0 1px 2px #000000;
+}
+
+.comic-burst-layer {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: 35;
+}
+
+.comic-burst {
+  position: absolute;
+  padding: 6px 15px;
+  border-radius: 16px;
+  background: var(--burst-bg, #ffd43b);
+  border: 3px solid #3b2204;
+  box-shadow: 0 4px 0 #3b2204, 0 8px 16px rgba(0, 0, 0, 0.22);
+  font-size: clamp(20px, 3.2vw, 28px);
+  font-weight: 900;
+  color: #3b2204;
+  letter-spacing: 0.03em;
+  will-change: transform, opacity;
+}
+
+.comic-burst.is-boing {
+  background: #a5d8ff;
+  border-color: #0b3966;
+  color: #0b3966;
+  box-shadow: 0 4px 0 #0b3966, 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================================================
+   Voice Subtitle Pill (Slot #5 Clickable Tap-to-Replay, Collision-Safe!)
+   ============================================================================ */
+
+.voice-subtitle {
+  position: fixed;
+  left: 50%;
+  bottom: 112px;
+  transform: translateX(-50%);
+  z-index: 90;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 74px;
+  min-width: 204px;
+  max-width: min(92vw, 600px);
+  padding: 10px 18px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #fffef6 0%, #fff0b3 100%);
+  border: 3px solid #d97706;
+  box-shadow: 0 5px 0 #9c5100, 0 10px 24px rgba(0, 0, 0, 0.22);
+  color: #2e1902;
+  font-family: var(--font-kid);
+  font-size: clamp(18px, 2.4vw, 22px);
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: center;
+  cursor: pointer;
+  pointer-events: auto;
+  touch-action: manipulation;
+}
+
+.voice-subtitle.is-speaking {
+  border-color: #f59f00;
+  box-shadow: 0 5px 0 #b86200, 0 0 0 4px rgba(255, 212, 59, 0.72), 0 10px 24px rgba(0, 0, 0, 0.22);
+}
+
+/* When any modal, Title, or Victory screen is open on normal heights (>= 560px),
+   dock subtitle safely in the reserved bottom 104px lane so 0 overlap with modal buttons! */
+body.ui-modal-open .voice-subtitle {
+  bottom: 10px;
+  top: auto;
+}
+
+/* ============================================================================
+   Shared Modal Backdrop & Sunlit Toy Card Surface
+   ============================================================================ */
+
+.ui-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 12px 114px;
+  background: rgba(18, 48, 82, 0.34);
+  backdrop-filter: blur(3px);
+  pointer-events: auto;
+}
+
+.software-gpu .ui-modal {
+  backdrop-filter: none;
+}
+.software-gpu .kid-btn .btn-icon {
+  filter: none;
+}
+
+.ui-modal-card {
+  position: relative;
+  width: min(560px, 95vw);
+  padding: 16px 16px 18px;
+  border-radius: 28px;
+  background: linear-gradient(180deg, var(--cream-top) 0%, var(--cream-bot) 100%);
+  border: 4px solid #e67700;
+  box-shadow: 0 8px 0 #a65300, 0 18px 36px rgba(0, 0, 0, 0.28);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  overflow: hidden;
+}
+
+.modal-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  pointer-events: none;
+}
+
+.modal-title-icon {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.modal-title {
+  margin: 0;
+  font-size: clamp(22px, 3.6vw, 30px);
+  line-height: 1.08;
+  font-weight: 900;
+  color: #d9480f;
+  text-shadow: 0 2px 0 rgba(255, 255, 255, 0.9);
+}
+
+.modal-actions-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+}
+
+/* ============================================================================
+   Mystery Artifact Roulette Chest Modal (02:24-02:52 Horizontal Spotlight Reel)
+   ============================================================================ */
+
+.roulette-top-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  pointer-events: none;
+}
+
+.roulette-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.roulette-stars-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: #ffe066;
+  border: 3px solid #5c3b09;
+  font-size: 18px;
+  font-weight: 900;
+  color: #362004;
+}
+
+.roulette-hint {
+  font-size: clamp(13px, 2.2vw, 16px);
+  font-weight: 900;
+  color: #1864ab;
+  text-align: center;
+  pointer-events: none;
+}
+
+.roulette-stage {
+  position: relative;
+  width: 100%;
+  height: 142px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #1e3a5f 0%, #2b5876 50%, #1e3a5f 100%);
+  border: 4px solid #5c3b09;
+  box-shadow: inset 0 4px 14px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.roulette-spotlight-circle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 136px;
+  height: 136px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 243, 191, 0.42) 0%, rgba(255, 212, 59, 0.16) 65%, transparent 72%);
+  border: 3px solid rgba(255, 224, 102, 0.85);
+  z-index: 3;
+}
+
+.roulette-pointer-top,
+.roulette-pointer-bottom {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  line-height: 1;
+  color: #ffd43b;
+  text-shadow: 0 2px 0 #5c3b09;
+  z-index: 5;
+}
+
+.roulette-pointer-top {
+  top: 2px;
+}
+
+.roulette-pointer-bottom {
+  bottom: 2px;
+}
+
+.roulette-pointer-line {
+  position: absolute;
+  top: 14px;
+  bottom: 14px;
+  left: 50%;
+  width: 3px;
+  transform: translateX(-50%);
+  background: rgba(255, 224, 102, 0.72);
+  z-index: 4;
+}
+
+.roulette-viewport {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+.roulette-strip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  will-change: transform;
+}
+
+.roulette-item-card {
+  width: 104px;
+  height: 112px;
+  flex-shrink: 0;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #ffffff 0%, #fff3bf 100%);
+  border: 3px solid var(--wpn-color, #ffd43b);
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.28);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 6px 6px;
+  transition: transform 0.1s ease;
+}
+
+.roulette-item-card.is-center {
+  transform: scale(1.07);
+  box-shadow: 0 0 0 3px #ffd43b, 0 6px 14px rgba(0, 0, 0, 0.35);
+}
+
+.roulette-item-card.is-winner {
+  transform: scale(1.1);
+  background: linear-gradient(180deg, #fffdf0 0%, #ffe066 100%);
+  box-shadow: 0 0 0 4px #51cf66, 0 8px 20px rgba(255, 212, 59, 0.75);
+}
+
+.roulette-item-tier {
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 900;
+  color: #5c3b09;
+  background: #ffe066;
+  padding: 2px 7px;
+  border-radius: 999px;
+}
+
+.roulette-item-img {
+  width: 56px;
+  height: 56px;
+  image-rendering: pixelated;
+}
+
+.roulette-item-name {
+  font-size: 11.5px;
+  line-height: 1;
+  font-weight: 900;
+  color: #2b1a03;
+}
+
+.roulette-spin-btn {
+  flex: 1;
+  max-width: 260px;
+  min-width: 186px;
+  min-height: 86px;
+  flex-direction: row;
+  gap: 10px;
+  padding: 10px 18px 14px;
+}
+
+.roulette-spin-btn .btn-icon {
+  font-size: 36px;
+}
+
+.roulette-spin-btn .btn-label {
+  font-size: 20px;
+}
+
+.roulette-close-btn {
+  min-width: 106px;
+  min-height: 86px;
+}
+
+.roulette-confetti {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+@keyframes confettiPop {
+  0% {
+    transform: translate(0, 0) scale(0.4);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--dx), var(--dy)) scale(1.1) rotate(160deg);
+    opacity: 0;
+  }
+}
+
+.confetti-bit {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  animation: confettiPop 0.85s ease-out forwards;
+}
+
+/* ============================================================================
+   Pause Modal (2x2 Grid on Portrait/Standard, 4x1 Row on Short Landscape)
+   ============================================================================ */
+
+.pause-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.toggle-tile {
+  min-width: 140px;
+  min-height: 84px;
+  padding: 8px 10px 12px;
+}
+
+.toggle-tile.is-on {
+  background: linear-gradient(180deg, #b2f2bb 0%, #40c057 100%);
+  border-color: #1b5e28;
+  box-shadow: 0 6px 0 #1b5e28, inset 0 3px 0 rgba(255, 255, 255, 0.65);
+  color: #0b3312;
+}
+
+.toggle-tile.is-off {
+  background: linear-gradient(180deg, #f1f3f5 0%, #ced4da 100%);
+  border-color: #495057;
+  box-shadow: 0 6px 0 #495057, inset 0 3px 0 rgba(255, 255, 255, 0.7);
+  color: #343a40;
+}
+
+.toggle-chaos.is-on {
+  background: linear-gradient(135deg, #ffe066 0%, #ff6b9d 50%, #74c0fc 100%);
+  border-color: #5f3dc4;
+  box-shadow: 0 6px 0 #5f3dc4, inset 0 3px 0 rgba(255, 255, 255, 0.72);
+  color: #2b0f4c;
+}
+
+.toggle-pill {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  padding: 1px 7px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 900;
+  background: #ffffff;
+  color: #212529;
+  border: 2px solid currentColor;
+  pointer-events: none;
+}
+
+.pause-action-btn {
+  flex: 1;
+  min-width: 140px;
+  min-height: 84px;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.pause-action-btn .btn-label {
+  font-size: 17px;
+}
+
+/* ============================================================================
+   Victory Podium Modal (4 Golden Trophies + Free Play / Chaos / New Map)
+   ============================================================================ */
+
+.victory-kicker {
+  padding: 3px 12px;
+  border-radius: 999px;
+  background: #ffe066;
+  border: 2px solid #b86200;
+  font-size: 13px;
+  font-weight: 900;
+  color: #5c3400;
+  pointer-events: none;
+}
+
+.victory-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.victory-crown {
+  font-size: 32px;
+  line-height: 1;
+}
+
+.victory-title {
+  margin: 0;
+  font-size: clamp(26px, 4.4vw, 38px);
+  line-height: 1.05;
+  font-weight: 900;
+  color: #e67700;
+  text-shadow: 0 2px 0 #ffffff;
+}
+
+.victory-trophies-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  width: 100%;
+  pointer-events: none;
+}
+
+.victory-trophy-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 7px 4px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #fff9db 0%, #ffd43b 100%);
+  border: 3px solid #b86200;
+  box-shadow: 0 4px 0 #b86200;
+}
+
+.victory-trophy-cup {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.victory-trophy-icon {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.victory-trophy-name {
+  font-size: 11px;
+  font-weight: 900;
+  color: #4a2d06;
+}
+
+.victory-actions-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+}
+
+.victory-btn-main {
+  flex: 1.3;
+  min-width: 168px;
+  min-height: 84px;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.victory-btn-main .btn-label {
+  font-size: 17px;
+}
+
+.victory-btn-sub {
+  flex: 1;
+  min-width: 146px;
+  min-height: 84px;
+}
+
+/* ============================================================================
+   Viewport Adaptation 1: Narrow Mobile Portrait (e.g. 390x844)
+   ============================================================================ */
+
+@media (max-width: 520px) {
+  .hud-top-left {
+    max-width: 67vw;
+    gap: 5px;
+  }
+
+  .hud-pill {
+    height: 36px;
+    padding: 3px 8px;
+  }
+
+  .hud-pill-emoji {
+    font-size: 18px;
+  }
+
+  .hud-pill-val {
+    font-size: 16px;
+  }
+
+  .hud-weapon-img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .hud-power-val {
+    font-size: 15px;
+  }
+
+  .trophy-pip {
+    width: 18px;
+    height: 18px;
+    font-size: 11px;
+  }
+
+  .hud-trophies-val {
+    font-size: 13px;
+  }
+
+  /* 2x3 wrapped grid of 118x74px buttons on 390x844 (3 * 118 + 2 * 6 = 366px <= 374px; >= 72x74 px targets)! */
+  .hud-actions {
+    bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+    width: min(374px, calc(100vw - 12px));
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .hud-action-btn {
+    width: 118px;
+    height: 74px;
+    min-width: 112px;
+    min-height: 74px;
+    flex: 0 0 118px;
+    padding: 8px 4px 4px;
+    gap: 1px;
+    border-radius: 16px;
+  }
+
+  .hud-btn-drum {
+    width: 118px;
+    min-width: 112px;
+    height: 74px;
+    min-height: 74px;
+    flex: 0 0 118px;
+  }
+
+  .hud-action-btn .btn-icon {
+    font-size: 30px;
+  }
+
+  .hud-action-btn .btn-label {
+    font-size: 11px;
+  }
+
+  .voice-subtitle {
+    bottom: 174px;
+    min-width: 196px;
+    max-width: 92vw;
+    padding: 9px 14px;
+    font-size: 18px;
+  }
+
+  #btn-title-continue {
+    flex-basis: 100%;
+    max-width: 312px;
+    min-width: 240px;
+    min-height: 92px;
+    padding: 8px 18px 12px;
+  }
+
+  #btn-title-continue .btn-label {
+    font-size: 20px;
+  }
+
+  #btn-title-play {
+    min-width: 198px;
+    min-height: 104px;
+    padding: 10px 20px 14px;
+  }
+
+  #btn-title-play .btn-label {
+    font-size: 25px;
+  }
+
+  #btn-title-voice {
+    min-width: 102px;
+    min-height: 104px;
+  }
+
+  .victory-btn-main {
+    flex-basis: 100%;
+    min-height: 86px;
+  }
+
+  .victory-btn-sub {
+    flex: 1 1 calc(50% - 6px);
+    min-width: 140px;
+    min-height: 84px;
+  }
+
+  .boss-banner {
+    top: 96px;
+  }
+}
+
+/* ============================================================================
+   Viewport Adaptation 2: Short Mobile Landscape (e.g. 844x390)
+   Every modal, Title, Boss Banner, HUD, and Voice Subtitle fits in 390px height!
+   ============================================================================ */
+
+@media (max-height: 559px) {
+  .hud-pill {
+    height: 36px;
+    padding: 3px 9px;
+  }
+
+  /* Active Play on 844x390: Boss Banner sits at y: 50..98 cleanly below single-row top status (y: 8..44)
+     and 128px above .voice-subtitle (y: 226..298)! */
+  .boss-banner {
+    top: 50px;
+    width: min(320px, 44vw);
+    padding: 4px 10px 6px;
+  }
+
+  .boss-hp-track {
+    height: 15px;
+  }
+
+  .hud-actions {
+    bottom: calc(8px + env(safe-area-inset-bottom, 0px));
+    gap: 8px;
+  }
+
+  .hud-action-btn {
+    width: 84px;
+    height: 76px;
+    min-width: 80px;
+    min-height: 76px;
+    padding: 9px 6px 4px;
+    gap: 1px;
+  }
+
+  .hud-btn-drum {
+    width: 90px;
+    min-width: 86px;
+    height: 76px;
+    min-height: 76px;
+  }
+
+  .hud-action-btn .btn-icon {
+    font-size: 34px;
+  }
+
+  .hud-action-btn .btn-label {
+    font-size: 12px;
+  }
+
+  /* Active Play subtitle sits at bottom: 92px (8px above 84px bottom bar, 166px below Boss Banner) */
+  .voice-subtitle {
+    bottom: 92px;
+    min-height: 72px;
+    max-width: min(92vw, 680px);
+    padding: 6px 16px;
+    font-size: 16.5px;
+    line-height: 1.15;
+  }
+
+  /* When ANY modal or Title/Victory is open on 844x390, dock subtitle cleanly at top: 6px (y: 6..78)
+     and place modal/title content in y: 86..384 (298px tall x 820px wide) -> 0 overlap guaranteed! */
+  body.ui-modal-open .voice-subtitle {
+    top: 6px;
+    bottom: auto;
+    min-height: 72px;
+    max-width: min(92vw, 680px);
+    padding: 6px 16px;
+    font-size: 16.5px;
+    line-height: 1.15;
+  }
+
+  .title-screen {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 86px 14px 8px;
+  }
+
+  .title-banner {
+    max-width: 380px;
+    padding: 10px 14px 12px;
+  }
+
+  .title-screen.has-continue .title-banner {
+    max-width: 344px;
+  }
+
+  .title-heading {
+    font-size: 26px;
+  }
+
+  .title-story-icons {
+    margin-top: 6px;
+  }
+
+  .story-chip {
+    width: 36px;
+    height: 36px;
+  }
+
+  .story-emoji {
+    font-size: 21px;
+  }
+
+  .title-screen.has-continue .title-actions {
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+
+  #btn-title-continue {
+    min-width: 146px;
+    min-height: 108px;
+    padding: 8px 12px 12px;
+  }
+
+  #btn-title-continue .btn-icon {
+    font-size: 34px;
+  }
+
+  #btn-title-continue .btn-label {
+    font-size: 16px;
+  }
+
+  #btn-title-play {
+    min-width: 196px;
+    min-height: 120px;
+    padding: 10px 20px 14px;
+  }
+
+  .title-screen.has-continue #btn-title-play {
+    min-width: 146px;
+    min-height: 108px;
+    padding: 8px 14px 12px;
+  }
+
+  .title-screen.has-continue #btn-title-play .btn-icon {
+    font-size: 34px;
+  }
+
+  .title-screen.has-continue #btn-title-play .btn-label {
+    font-size: 20px;
+  }
+
+  #btn-title-voice {
+    min-width: 96px;
+    min-height: 120px;
+  }
+
+  .title-screen.has-continue #btn-title-voice {
+    min-width: 88px;
+    min-height: 108px;
+    padding: 8px 10px 12px;
+  }
+
+  .ui-modal {
+    padding: 84px 12px 6px;
+  }
+
+  .ui-modal-card {
+    width: min(690px, 96vw);
+    padding: 8px 14px 10px;
+    gap: 6px;
+    border-radius: 22px;
+  }
+
+  .modal-title {
+    font-size: 20px;
+  }
+
+  .modal-title-icon {
+    font-size: 22px;
+  }
+
+  /* Roulette on 844x390: compact 106px reel + 84px buttons = ~264px total height <= 300px! */
+  .roulette-hint {
+    font-size: 12.5px;
+  }
+
+  .roulette-stage {
+    height: 106px;
+  }
+
+  .roulette-spotlight-circle {
+    width: 102px;
+    height: 102px;
+  }
+
+  .roulette-item-card {
+    width: 92px;
+    height: 92px;
+    padding: 3px 4px 4px;
+  }
+
+  .roulette-item-img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .roulette-spin-btn,
+  .roulette-close-btn {
+    min-height: 84px;
+    height: 84px;
+    padding: 6px 14px 10px;
+  }
+
+  /* Pause on 844x390: 4x1 row of 76px toggle tiles + 76px action row = ~212px total height! */
+  .pause-grid {
+    grid-template-columns: repeat(4, minmax(112px, 1fr));
+    gap: 10px;
+  }
+
+  .toggle-tile {
+    min-width: 112px;
+    min-height: 76px;
+    height: 76px;
+    padding: 5px 6px 8px;
+  }
+
+  .toggle-tile .btn-icon {
+    font-size: 34px;
+  }
+
+  .pause-action-btn {
+    min-height: 76px;
+    height: 76px;
+    padding: 5px 14px 9px;
+  }
+
+  /* Victory on 844x390: compact header + 54px trophy strip + 1 row of 84px buttons = ~224px! */
+  .victory-kicker {
+    display: none;
+  }
+
+  .victory-title {
+    font-size: 22px;
+  }
+
+  .victory-crown {
+    font-size: 24px;
+  }
+
+  .victory-trophy-card {
+    flex-direction: row;
+    gap: 5px;
+    padding: 5px 8px;
+  }
+
+  .victory-trophy-cup {
+    font-size: 20px;
+  }
+
+  .victory-actions-row {
+    flex-wrap: nowrap;
+  }
+
+  .victory-btn-main,
+  .victory-btn-sub {
+    min-width: 148px;
+    min-height: 84px;
+    height: 84px;
+    flex-direction: row;
+    gap: 8px;
+    padding: 6px 12px 10px;
+  }
+
+  .victory-btn-sub .btn-label {
+    font-size: 14px;
+  }
+}

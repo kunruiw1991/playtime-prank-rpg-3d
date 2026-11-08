@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>PLAYTIME PRANK RPG 3D! — Lily Lovebraids, Giblet &amp; Chum Chompkins' Silly Prank Party!</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='26'%3E%F0%9F%AB%96%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="./styles/main.css" />
+</head>
+<body>
+  <canvas id="game-canvas" aria-label="Playtime Prank RPG 3D Lily Lovebraids Giblet and The Smiling Critters"></canvas>
+
+  <div id="hud" hidden></div>
+  <div id="ui-layer"></div>
+
+  <!-- Visible immediately for instant paint and iPad safety; adopted by src/ui/title.js -->
+  <div id="title-screen" class="title-screen">
+    <div id="title-banner" class="title-banner">
+      <div class="title-kicker">🫖 LILY, GIBLET &amp; SMILING CRITTERS 🎀</div>
+      <h1 class="title-heading">PLAYTIME PRANK RPG 3D!</h1>
+      <div class="title-sub">Lily Lovebraids, Giblet &amp; Chum Chompkins' Silly Prank Party!</div>
+    </div>
+    <div id="title-actions" class="title-actions">
+      <button type="button" id="btn-title-play" class="kid-btn kid-btn-play" aria-label="Play Game">
+        <span class="btn-icon">▶</span>
+        <span class="btn-label">PLAY!</span>
+      </button>
+    </div>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

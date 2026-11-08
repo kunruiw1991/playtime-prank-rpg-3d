@@ -1,0 +1,551 @@
+{
+  "version": 1,
+  "totalClips": 68,
+  "totalBytes": 2969916,
+  "clips": {
+    "guide_title": {
+      "id": "guide_title",
+      "speaker": "narrator",
+      "text": "Welcome to Playtime Prank RPG 3D with Lily Lovebraids, Giblet, and Chum Chompkins! Tap Play!",
+      "file": "assets/voice/guide_title.mp3",
+      "duration": 8.318,
+      "bytes": 67081
+    },
+    "guide_welcome": {
+      "id": "guide_welcome",
+      "speaker": "sahur",
+      "text": "Chum Chompkins here! Tap the glowing Tea Party Gift Box right in front of us!",
+      "file": "assets/voice/guide_welcome.mp3",
+      "duration": 4.722,
+      "bytes": 38242
+    },
+    "guide_starter_pop": {
+      "id": "guide_starter_pop",
+      "speaker": "narrator",
+      "text": "Awesome! Golden Crumpet Stars, a Prank Pod Kit, and a Free Gadget Spin!",
+      "file": "assets/voice/guide_starter_pop.mp3",
+      "duration": 6.047,
+      "bytes": 48900
+    },
+    "guide_tap_block": {
+      "id": "guide_tap_block",
+      "speaker": "narrator",
+      "text": "Tap any glowing Prank Box to bonk it three times with your GrabPack Hand!",
+      "file": "assets/voice/guide_tap_block.mp3",
+      "duration": 4.531,
+      "bytes": 36779
+    },
+    "guide_combo_sahur": {
+      "id": "guide_combo_sahur",
+      "speaker": "sahur",
+      "text": "Boing, slap, splash! Super Stretchy Braid and Crumpet shockwave combo!",
+      "file": "assets/voice/guide_combo_sahur.mp3",
+      "duration": 4.969,
+      "bytes": 40332
+    },
+    "guide_boing_hint": {
+      "id": "guide_boing_hint",
+      "speaker": "narrator",
+      "text": "Boing! Stretchy pigtail bounce! Spin the wheel for a stronger prank gadget first!",
+      "file": "assets/voice/guide_boing_hint.mp3",
+      "duration": 6.868,
+      "bytes": 55378
+    },
+    "guide_ready_tralalero": {
+      "id": "guide_ready_tralalero",
+      "speaker": "narrator",
+      "text": "GrabPack Hand ready! Let us prank Tea Pod Gracie in the Pink Capsule Lab!",
+      "file": "assets/voice/guide_ready_tralalero.mp3",
+      "duration": 5.691,
+      "bytes": 45974
+    },
+    "guide_ready_bombardiro": {
+      "id": "guide_ready_bombardiro",
+      "speaker": "narrator",
+      "text": "Purple Braid Whip ready! Let us share crumpets with Hungry CatNap by the Fridge!",
+      "file": "assets/voice/guide_ready_bombardiro.mp3",
+      "duration": 5.611,
+      "bytes": 45347
+    },
+    "guide_ready_patapim": {
+      "id": "guide_ready_patapim",
+      "speaker": "narrator",
+      "text": "Spring Boots on! Let us unscrew Tiny-Legs Prototype on the Critters Soccer Court!",
+      "file": "assets/voice/guide_ready_patapim.mp3",
+      "duration": 5.816,
+      "bytes": 47019
+    },
+    "guide_ready_king": {
+      "id": "guide_ready_king",
+      "speaker": "narrator",
+      "text": "Makeup Blaster ready! Give the Clown Mech Boss a rainbow makeover in the Workshop!",
+      "file": "assets/voice/guide_ready_king.mp3",
+      "duration": 5.649,
+      "bytes": 45765
+    },
+    "vo_wpn_bat": {
+      "id": "vo_wpn_bat",
+      "speaker": "sahur",
+      "text": "Blue and Red GrabPack Hand! Stretchy high-five power for popping prank crates!",
+      "file": "assets/voice/vo_wpn_bat.mp3",
+      "duration": 4.84,
+      "bytes": 39287
+    },
+    "vo_wpn_gong": {
+      "id": "vo_wpn_gong",
+      "speaker": "cappuccina",
+      "text": "Swish boing! My Purple Braid Whip blocks soccer balls and tickles bosses!",
+      "file": "assets/voice/vo_wpn_gong.mp3",
+      "duration": 5.481,
+      "bytes": 44302
+    },
+    "vo_wpn_mallet": {
+      "id": "vo_wpn_mallet",
+      "speaker": "bananini",
+      "text": "Ding ding! Breezy-Bake Crumpet Teapot Launcher! Fresh golden crumpets for everyone!",
+      "file": "assets/voice/vo_wpn_mallet.mp3",
+      "duration": 6.604,
+      "bytes": 53288
+    },
+    "vo_wpn_taiko": {
+      "id": "vo_wpn_taiko",
+      "speaker": "lirili",
+      "text": "Puff sparkle! KickinChicken Rainbow Makeup Blaster! Instant silly clown makeover!",
+      "file": "assets/voice/vo_wpn_taiko.mp3",
+      "duration": 7.041,
+      "bytes": 56841
+    },
+    "vo_wpn_rainbow": {
+      "id": "vo_wpn_rainbow",
+      "speaker": "sahur",
+      "text": "Ultimate Jackpot! The Prank Remote and Magnet Wrench of Champions!",
+      "file": "assets/voice/vo_wpn_rainbow.mp3",
+      "duration": 4.251,
+      "bytes": 34480
+    },
+    "vo_totem_tier1": {
+      "id": "vo_totem_tier1",
+      "speaker": "bananini",
+      "text": "Hooray! The Pink Capsule Tea Pod is open and popping silly Tea-Party Hats!",
+      "file": "assets/voice/vo_totem_tier1.mp3",
+      "duration": 5.327,
+      "bytes": 43048
+    },
+    "vo_totem_tier2": {
+      "id": "vo_totem_tier2",
+      "speaker": "cappuccina",
+      "text": "Yum! My Dollhouse Breezy-Bake Crumpet Oven and Stocked Fridge are baking golden stars!",
+      "file": "assets/voice/vo_totem_tier2.mp3",
+      "duration": 6.239,
+      "bytes": 50363
+    },
+    "vo_totem_tier3": {
+      "id": "vo_totem_tier3",
+      "speaker": "cappuccina",
+      "text": "Whoa! The GrabPack Prank Turret is launching rainbow makeup and stretchy braids!",
+      "file": "assets/voice/vo_totem_tier3.mp3",
+      "duration": 5.742,
+      "bytes": 46392
+    },
+    "helper_cappuccina_wake": {
+      "id": "helper_cappuccina_wake",
+      "speaker": "bananini",
+      "text": "Giblet here! Pink Capsule Tea Pod ready with fancy bowties and teacup hats!",
+      "file": "assets/voice/helper_cappuccina_wake.mp3",
+      "duration": 5.515,
+      "bytes": 44720
+    },
+    "helper_bananini_wake": {
+      "id": "helper_bananini_wake",
+      "speaker": "cappuccina",
+      "text": "Lily Lovebraids reporting! Welcome to my Dollhouse Tea Party and Crumpet Kitchen!",
+      "file": "assets/voice/helper_bananini_wake.mp3",
+      "duration": 5.755,
+      "bytes": 46601
+    },
+    "helper_lirili_wake": {
+      "id": "helper_lirili_wake",
+      "speaker": "sahur",
+      "text": "Chum Chompkins belly laugh! Extra crumpets, cookies, and silly belly bounces!",
+      "file": "assets/voice/helper_lirili_wake.mp3",
+      "duration": 5.299,
+      "bytes": 42839
+    },
+    "helper_assassino_wake": {
+      "id": "helper_assassino_wake",
+      "speaker": "lirili",
+      "text": "Hoppy, KickinChicken, and Baba Chops here! Our GrabPack Prank Turret is online!",
+      "file": "assets/voice/helper_assassino_wake.mp3",
+      "duration": 6.488,
+      "bytes": 52452
+    },
+    "fairy_pot_max": {
+      "id": "fairy_pot_max",
+      "speaker": "cappuccina",
+      "text": "All four Tea Party Prank Stations are maxed out! Golden Crumpet Star fountain!",
+      "file": "assets/voice/fairy_pot_max.mp3",
+      "duration": 5.786,
+      "bytes": 46810
+    },
+    "fairy_need_stars": {
+      "id": "fairy_need_stars",
+      "speaker": "narrator",
+      "text": "Collect more Crumpet Stars or win the earlier Prank Boss Trophy first!",
+      "file": "assets/voice/fairy_need_stars.mp3",
+      "duration": 4.511,
+      "bytes": 36570
+    },
+    "wheel_open": {
+      "id": "wheel_open",
+      "speaker": "cappuccina",
+      "text": "Spin the Prank Gadget Wheel for a stretchy braid, teapot, or makeup blaster!",
+      "file": "assets/voice/wheel_open.mp3",
+      "duration": 5.06,
+      "bytes": 40959
+    },
+    "wheel_spinning": {
+      "id": "wheel_spinning",
+      "speaker": "sahur",
+      "text": "Round and round the Tea Party Prank Wheel goes! What gadget will we get?",
+      "file": "assets/voice/wheel_spinning.mp3",
+      "duration": 4.311,
+      "bytes": 35107
+    },
+    "wheel_jackpot": {
+      "id": "wheel_jackpot",
+      "speaker": "cappuccina",
+      "text": "Tea Party Jackpot! Bonus Crumpet Stars and a glowing ribbon shield heart!",
+      "file": "assets/voice/wheel_jackpot.mp3",
+      "duration": 5.418,
+      "bytes": 43884
+    },
+    "vo_drop_stars": {
+      "id": "vo_drop_stars",
+      "speaker": "narrator",
+      "text": "Shiny Golden Crumpet Stars!",
+      "file": "assets/voice/vo_drop_stars.mp3",
+      "duration": 2.189,
+      "bytes": 17971
+    },
+    "vo_drop_jackpot": {
+      "id": "vo_drop_jackpot",
+      "speaker": "sahur",
+      "text": "Whoa! Stocked Dollhouse Fridge Crumpet Star Shower!",
+      "file": "assets/voice/vo_drop_jackpot.mp3",
+      "duration": 3.524,
+      "bytes": 28629
+    },
+    "vo_drop_seed": {
+      "id": "vo_drop_seed",
+      "speaker": "cappuccina",
+      "text": "A Prank Pod Kit! Tap Prank to build a Tea Pod, Crumpet Oven, or Turret!",
+      "file": "assets/voice/vo_drop_seed.mp3",
+      "duration": 5.869,
+      "bytes": 47437
+    },
+    "vo_drop_wheel": {
+      "id": "vo_drop_wheel",
+      "speaker": "cappuccina",
+      "text": "Free Spin Token! Let us spin the Prank Gadget Wheel!",
+      "file": "assets/voice/vo_drop_wheel.mp3",
+      "duration": 4.145,
+      "bytes": 33644
+    },
+    "vo_drop_mango": {
+      "id": "vo_drop_mango",
+      "speaker": "narrator",
+      "text": "Yum! Warm Breezy-Bake Golden Crumpets and Strawberry Tea!",
+      "file": "assets/voice/vo_drop_mango.mp3",
+      "duration": 4.647,
+      "bytes": 37615
+    },
+    "vo_drop_latte": {
+      "id": "vo_drop_latte",
+      "speaker": "cappuccina",
+      "text": "Sweet Berry Tea Zoom! Super fast feet and a bonus ribbon heart!",
+      "file": "assets/voice/vo_drop_latte.mp3",
+      "duration": 4.921,
+      "bytes": 39914
+    },
+    "vo_drop_bananini": {
+      "id": "vo_drop_bananini",
+      "speaker": "sahur",
+      "text": "Hehe! Mini Chum Chompkins popped out giggling!",
+      "file": "assets/voice/vo_drop_bananini.mp3",
+      "duration": 3.356,
+      "bytes": 27375
+    },
+    "vo_drop_confetti": {
+      "id": "vo_drop_confetti",
+      "speaker": "bananini",
+      "text": "Hooray! Rainbow Ribbon Confetti and Mini Giblet Tea Buddy!",
+      "file": "assets/voice/vo_drop_confetti.mp3",
+      "duration": 4.194,
+      "bytes": 34062
+    },
+    "vo_drop_toot": {
+      "id": "vo_drop_toot",
+      "speaker": "lirili",
+      "text": "Boing whoop! Silly Whoopee Cushion and Mini Hoppy Hopscotch!",
+      "file": "assets/voice/vo_drop_toot.mp3",
+      "duration": 4.638,
+      "bytes": 37615
+    },
+    "vo_gear_boots": {
+      "id": "vo_gear_boots",
+      "speaker": "lirili",
+      "text": "Hoppy Bouncy Spring Boots! Zoom and jump across the Dollhouse!",
+      "file": "assets/voice/vo_gear_boots.mp3",
+      "duration": 4.879,
+      "bytes": 39496
+    },
+    "vo_gear_crown": {
+      "id": "vo_gear_crown",
+      "speaker": "cappuccina",
+      "text": "Fancy Pink Capsule Tea-Party Hat! Five glowing ribbon shield hearts!",
+      "file": "assets/voice/vo_gear_crown.mp3",
+      "duration": 5.278,
+      "bytes": 42839
+    },
+    "vo_gear_cape": {
+      "id": "vo_gear_cape",
+      "speaker": "cappuccina",
+      "text": "Lily Lovebraids Ribbon Cape! Super Crumpet Star magnet!",
+      "file": "assets/voice/vo_gear_cape.mp3",
+      "duration": 4.557,
+      "bytes": 36988
+    },
+    "vo_boss_alert": {
+      "id": "vo_boss_alert",
+      "speaker": "sahur",
+      "text": "Ooh! Tea party prank alert! A Giant Playtime Boss just walked in!",
+      "file": "assets/voice/vo_boss_alert.mp3",
+      "duration": 5.331,
+      "bytes": 43257
+    },
+    "vo_pet_cappuccina": {
+      "id": "vo_pet_cappuccina",
+      "speaker": "bananini",
+      "text": "Hehe! Mini Giblet loves high-fives and shares extra Crumpet Stars!",
+      "file": "assets/voice/vo_pet_cappuccina.mp3",
+      "duration": 5.154,
+      "bytes": 41794
+    },
+    "vo_pet_bananini": {
+      "id": "vo_pet_bananini",
+      "speaker": "sahur",
+      "text": "Yum yum! Happy Mini Chum Chompkins shares golden snacks with you!",
+      "file": "assets/voice/vo_pet_bananini.mp3",
+      "duration": 4.102,
+      "bytes": 33435
+    },
+    "vo_pet_lirili": {
+      "id": "vo_pet_lirili",
+      "speaker": "lirili",
+      "text": "Boing boing! Mini Hoppy Hopscotch cheers for our soccer goal!",
+      "file": "assets/voice/vo_pet_lirili.mp3",
+      "duration": 4.708,
+      "bytes": 38242
+    },
+    "boss_tralalero_spawn": {
+      "id": "boss_tralalero_spawn",
+      "speaker": "tralalero",
+      "text": "Step into my Pink Capsule Pod! Every proper guest needs a fancy makeover!",
+      "file": "assets/voice/boss_tralalero_spawn.mp3",
+      "duration": 4.85,
+      "bytes": 39287
+    },
+    "boss_tralalero_boing": {
+      "id": "boss_tralalero_boing",
+      "speaker": "tralalero",
+      "text": "Teacup bounce! Spin the wheel for a GrabPack Hand before our tea party!",
+      "file": "assets/voice/boss_tralalero_boing.mp3",
+      "duration": 4.615,
+      "bytes": 37406
+    },
+    "boss_tralalero_ouch": {
+      "id": "boss_tralalero_ouch",
+      "speaker": "tralalero",
+      "text": "Oh my ribbons! That Pink Capsule Pod just put a giant teacup hat on my head!",
+      "file": "assets/voice/boss_tralalero_ouch.mp3",
+      "duration": 4.916,
+      "bytes": 39914
+    },
+    "boss_tralalero_defeat": {
+      "id": "boss_tralalero_defeat",
+      "speaker": "tralalero",
+      "text": "Hehe, this silly Tea-Party Hat and bowtie actually look fabulous! Take my Trophy!",
+      "file": "assets/voice/boss_tralalero_defeat.mp3",
+      "duration": 5.207,
+      "bytes": 42212
+    },
+    "vo_win_tralalero": {
+      "id": "vo_win_tralalero",
+      "speaker": "narrator",
+      "text": "Hooray! Tea Pod Gracie is wearing her silly teacup hat! Trophy one!",
+      "file": "assets/voice/vo_win_tralalero.mp3",
+      "duration": 6.016,
+      "bytes": 48691
+    },
+    "boss_bombardiro_spawn": {
+      "id": "boss_bombardiro_spawn",
+      "speaker": "bombardiro",
+      "text": "Meow rumble! My tummy is grumbling by the Dollhouse Fridge! Where are the snacks?",
+      "file": "assets/voice/boss_bombardiro_spawn.mp3",
+      "duration": 6.14,
+      "bytes": 49736
+    },
+    "boss_bombardiro_boing": {
+      "id": "boss_bombardiro_boing",
+      "speaker": "bombardiro",
+      "text": "Purr bounce! Bring Lily Purple Braid Whip or a warm crumpet first!",
+      "file": "assets/voice/boss_bombardiro_boing.mp3",
+      "duration": 4.756,
+      "bytes": 38660
+    },
+    "boss_bombardiro_ouch": {
+      "id": "boss_bombardiro_ouch",
+      "speaker": "bombardiro",
+      "text": "Ooh! Fresh Breezy-Bake golden crumpets and butter! Those smell delicious!",
+      "file": "assets/voice/boss_bombardiro_ouch.mp3",
+      "duration": 5.822,
+      "bytes": 47019
+    },
+    "boss_bombardiro_defeat": {
+      "id": "boss_bombardiro_defeat",
+      "speaker": "bombardiro",
+      "text": "Purr! My tummy is full of warm golden crumpets! Let us be best friends! Take my Trophy!",
+      "file": "assets/voice/boss_bombardiro_defeat.mp3",
+      "duration": 7.809,
+      "bytes": 62901
+    },
+    "vo_win_bombardiro": {
+      "id": "vo_win_bombardiro",
+      "speaker": "narrator",
+      "text": "Awesome job! Hungry CatNap loves our Breezy-Bake crumpets! Two trophies won!",
+      "file": "assets/voice/vo_win_bombardiro.mp3",
+      "duration": 6.797,
+      "bytes": 54960
+    },
+    "boss_patapim_spawn": {
+      "id": "boss_patapim_spawn",
+      "speaker": "patapim",
+      "text": "Clank stomp! Nobody can score past Lily stretchy braids or my giant spider legs!",
+      "file": "assets/voice/boss_patapim_spawn.mp3",
+      "duration": 6.051,
+      "bytes": 48900
+    },
+    "boss_patapim_boing": {
+      "id": "boss_patapim_boing",
+      "speaker": "patapim",
+      "text": "Clang bounce! Put on Spring Boots and grab the Crumpet Teapot Launcher first!",
+      "file": "assets/voice/boss_patapim_boing.mp3",
+      "duration": 5.292,
+      "bytes": 42839
+    },
+    "boss_patapim_ouch": {
+      "id": "boss_patapim_ouch",
+      "speaker": "patapim",
+      "text": "Hey! Stop unscrewing my giant spider legs! Everyone will see my tiny little shoes!",
+      "file": "assets/voice/boss_patapim_ouch.mp3",
+      "duration": 6.943,
+      "bytes": 56005
+    },
+    "boss_patapim_defeat": {
+      "id": "boss_patapim_defeat",
+      "speaker": "patapim",
+      "text": "Oh no, my giant legs popped off and my tiny goofy legs are out! Take my Trophy!",
+      "file": "assets/voice/boss_patapim_defeat.mp3",
+      "duration": 5.958,
+      "bytes": 48273
+    },
+    "vo_win_patapim": {
+      "id": "vo_win_patapim",
+      "speaker": "narrator",
+      "text": "Haha! Look at Tiny-Legs Prototype dancing in his tiny shoes! Three trophies!",
+      "file": "assets/voice/vo_win_patapim.mp3",
+      "duration": 6.735,
+      "bytes": 54333
+    },
+    "boss_king_spawn": {
+      "id": "boss_king_spawn",
+      "speaker": "sahur_king",
+      "text": "Beep boop! Behold my giant Stained-Glass Workshop Spider-Mech!",
+      "file": "assets/voice/boss_king_spawn.mp3",
+      "duration": 4.225,
+      "bytes": 34271
+    },
+    "boss_king_boing": {
+      "id": "boss_king_boing",
+      "speaker": "sahur_king",
+      "text": "Buzzer bounce! Bring KickinChicken Makeup Blaster or the Prank Remote to prank me!",
+      "file": "assets/voice/boss_king_boing.mp3",
+      "duration": 5.188,
+      "bytes": 42003
+    },
+    "boss_king_ouch": {
+      "id": "boss_king_ouch",
+      "speaker": "sahur_king",
+      "text": "Honk honk! Why am I wearing a rainbow afro wig, big red clown nose, and polka dots?",
+      "file": "assets/voice/boss_king_ouch.mp3",
+      "duration": 5.634,
+      "bytes": 45556
+    },
+    "boss_king_defeat": {
+      "id": "boss_king_defeat",
+      "speaker": "sahur_king",
+      "text": "Honk giggle! Lily, Giblet, Chum, and the Smiling Critters win the Silly Prank Party!",
+      "file": "assets/voice/boss_king_defeat.mp3",
+      "duration": 5.598,
+      "bytes": 45347
+    },
+    "vo_win_king": {
+      "id": "vo_win_king",
+      "speaker": "narrator",
+      "text": "We did it! All four Playtime Prank Trophies won! Crumpet tea party time!",
+      "file": "assets/voice/vo_win_king.mp3",
+      "duration": 6.478,
+      "bytes": 52243
+    },
+    "vo_finale_parade": {
+      "id": "vo_finale_parade",
+      "speaker": "cappuccina",
+      "text": "Grand Dollhouse Tea Party! Golden crumpets, stretchy braids, and giggles for everyone!",
+      "file": "assets/voice/vo_finale_parade.mp3",
+      "duration": 6.883,
+      "bytes": 55587
+    },
+    "vo_keep_playing": {
+      "id": "vo_keep_playing",
+      "speaker": "narrator",
+      "text": "Welcome back to Lily Lovebraids and Giblet Tea Hub! Let us keep pranking!",
+      "file": "assets/voice/vo_keep_playing.mp3",
+      "duration": 5.514,
+      "bytes": 44720
+    },
+    "vo_chaos_on": {
+      "id": "vo_chaos_on",
+      "speaker": "sahur",
+      "text": "Silly Prank Chaos Mode on! Every Gift Box pops double crumpet and makeup surprises!",
+      "file": "assets/voice/vo_chaos_on.mp3",
+      "duration": 5.347,
+      "bytes": 43257
+    },
+    "vo_chaos_off": {
+      "id": "vo_chaos_off",
+      "speaker": "narrator",
+      "text": "Cozy Tea Party Mode! Sunny Dollhouse adventure!",
+      "file": "assets/voice/vo_chaos_off.mp3",
+      "duration": 4.071,
+      "bytes": 33017
+    },
+    "sahur_sleepy_zzz": {
+      "id": "sahur_sleepy_zzz",
+      "speaker": "narrator",
+      "text": "Hold on! That Prank Boss is still getting dressed! Win the earlier trophy first!",
+      "file": "assets/voice/sahur_sleepy_zzz.mp3",
+      "duration": 6.653,
+      "bytes": 53706
+    }
+  }
+}
